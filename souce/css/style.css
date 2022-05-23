@@ -116,7 +116,7 @@ a {
 }
 
 body {
-  height: 10000px;
+  height: 100%;
   min-width: 375px;
 }
 
@@ -383,16 +383,25 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin: 0 -40px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+@media (min-width: 1100px) {
+  .services-we__row {
+    margin: 0 -40px;
+  }
 }
 .services-we__column {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 25%;
           flex: 1 1 25%;
-  padding: 0 40px;
+  padding: 0 25px;
   margin-bottom: 45px;
+}
+@media (min-width: 1100px) {
+  .services-we__column {
+    padding: 0 40px;
+  }
 }
 @media (min-width: 375px) and (max-width: 576px) {
   .services-we__column {
@@ -418,11 +427,15 @@ main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 0 -31px;
   text-align: center;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+}
+@media (min-width: 1100px) {
+  .meet-out__row {
+    margin: 0 -31px;
+  }
 }
 .meet-out__column {
   display: -webkit-box;
@@ -438,8 +451,13 @@ main {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 25%;
           flex: 1 1 25%;
-  padding: 0 31px;
+  padding: 0 20px;
   margin-bottom: 45px;
+}
+@media (min-width: 1100px) {
+  .meet-out__column {
+    padding: 0 31px;
+  }
 }
 .meet-out__column .link {
   display: block;
@@ -538,7 +556,11 @@ main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 0 -45px;
+}
+@media (min-width: 1100px) {
+  .we-got-skills__row {
+    margin: 0 -45px;
+  }
 }
 .we-got-skills__column {
   -webkit-box-flex: 1;
@@ -546,6 +568,11 @@ main {
           flex: 1 1 25%;
   padding: 0 45px;
   margin-bottom: 45px;
+}
+@media (min-width: 1100px) {
+  .we-got-skills__column {
+    padding: 0 25px;
+  }
 }
 .we-got-skills__column:first-child .imga::before {
   content: "90";
@@ -913,6 +940,7 @@ main {
 }
 
 .get-in-touch {
+  display: none;
   background: #3c5499;
   padding: 6% 0 6% 0;
   color: #fff;
