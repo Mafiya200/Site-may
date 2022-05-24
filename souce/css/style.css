@@ -241,6 +241,16 @@ a.button {
   background: #643a79;
 }
 
+.navigation {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+}
+@media (max-width: 700px) {
+  .navigation {
+    display: none;
+  }
+}
 .navigation .navigation__button {
   padding: 10px 20.5px;
 }
@@ -259,12 +269,10 @@ a.button {
   margin-bottom: 12.9%;
 }
 .header__top__flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(auto, 500px) 1fr;
+  grid-template-columns: minmax(auto, 500px) 1fr;
 }
 .header__center {
   text-align: center;
@@ -1042,4 +1050,82 @@ main {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: footer;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr minmax(auto, 940px) 1fr;
+  grid-template-columns: 1fr minmax(auto, 940px) 1fr;
+  background: #344b8e;
+}
+
+.footer__center {
+  row-gap: 15px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  place-items: center;
+  grid-auto-flow: column;
+}
+@media (max-width: 1000px) {
+  .footer__center {
+    padding: 15px 0;
+    grid-auto-flow: row;
+    -ms-grid-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr;
+    grid-template-rows: 1fr;
+  }
+  .footer__center > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .footer__center > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .footer__center > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+}
+.footer__center a {
+  font-size: 24px;
+  line-height: 29.9px;
+  letter-spacing: 0.48px;
+  text-align: center;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+.facebook:hover a {
+  color: #30bae7;
+}
+
+.twitter:hover a {
+  color: #30bae7;
+}
+
+.google:hover a {
+  color: #30bae7;
+}
+
+.linkedin:hover a {
+  color: #30bae7;
+}
+
+.behan:hover a {
+  color: #30bae7;
+}
+
+.dribbb:hover a {
+  color: #30bae7;
+}
+
+.github:hover a {
+  color: #30bae7;
+}
+
+.otstup:hover a {
+  color: #30bae7;
 }
