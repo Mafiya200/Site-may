@@ -163,7 +163,54 @@ a.button {
     padding         : 8.5% 28%;
     border-radius   : 5px;
     box-shadow      : 0 4px 0 0px #c86a40;
+    //@at-root
+    transition: all 0.3s ease;
+    position  : relative;
+    outline: none;
+    &:hover{
+        box-shadow      : 0 2px 0 0px white;
+    }
+    //@at-root
 }
+
+.custom {
+    border-radius: 5px;
+    border    : none;
+    z-index   : 1;
+    &:after {
+        position        : absolute;
+        content         : "";
+        width           : 100%;
+        height          : 0;
+        top             : 0;
+        left            : 0;
+        z-index         : -1;
+        border-radius   : 5px;
+        background-color: $orange_col;
+        background-image: linear-gradient(315deg, #4f0070 0%, #f913e2 74%);
+        box-shadow      : inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+            7px 7px 20px 0px rgba(0, 0, 0, .1),
+            4px 4px 5px 0px rgba(0, 0, 0, .1);
+        transition: all 0.3s ease;
+    }
+    
+    &:hover {
+    }
+    
+    &:hover:after {
+        border-radius: 4px;
+        top   : auto;
+        bottom: 0;
+        height: 100%;
+    }
+    
+    &:active {
+        top: 2px;
+    }
+}
+
+
+
 
 .logo {
     margin-left: 8px;
@@ -193,12 +240,15 @@ a.button {
 }
 
 .navigation {
-display: grid;
-grid-auto-flow: column;
-@media (max-width:700px) {
-    display: none;
-    
-}
+    display       : grid;
+    grid-auto-flow: column;
+    justify-content: end;
+
+    @media (max-width:700px) {
+        display: none;
+
+    }
+
     .navigation__button {
         padding: 10px 20.5px;
 
@@ -222,8 +272,8 @@ grid-auto-flow: column;
     }
 
     &__top__flex {
-        display: grid;
-        grid-template-columns: minmax(auto,500px) 1fr;
+        display              : grid;
+        grid-template-columns: minmax(auto, 500px) 1fr;
     }
 
     &__center {
@@ -847,7 +897,13 @@ main {
             background-color: $green_col;
             padding         : 8.5% 20%;
             box-shadow      : 0 4px 0 0px #14a58c;
+        
         }
+        a:hover{
+            box-shadow      : 0 2px 0 0px black;   
+        }
+
+        
     }
 
 }
@@ -1060,94 +1116,88 @@ main {
 }
 
 .footer__center {
-row-gap: 15px;
+    row-gap       : 15px;
     display       : grid;
     grid-column   : 2/3;
     place-items   : center;
     grid-auto-flow: column;
+
     @media (max-width:1000px) {
-        padding: 15px 0;
-        grid-auto-flow: row;
+        padding              : 15px 0;
+        grid-auto-flow       : row;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr;
-        
+        grid-template-rows   : 1fr;
+
     }
-    
-    
+
+
 
     a {
         font-size     : 24px;
         line-height   : 29.9px;
         letter-spacing: 0.48px;
         text-align    : center;
-            transition: 0.8s;  
+        transition    : 0.4s;
     }
 
 
 
 
 }
+
 .facebook {
-    
-    &:hover{
-        a{
-            color:#30bae7;
-        }
+    a:hover {
+           
     }
 }
 
 .twitter {
-    &:hover{
-        a{
-            color:#30bae7;
+    &:hover {
+        a {
+            color: #30bae7;
         }
     }
 }
 
 .google {
-    &:hover{
-        a{
-            color:#30bae7;
+    &:hover {
+        a {
+            color: #ea4235;
         }
     }
 }
 
 .linkedin {
-    &:hover{
-        a{
-            color:#30bae7;
+    &:hover {
+        a {
+            
         }
     }
 }
 
 .behan {
-    &:hover{
-        a{
-            color:#30bae7;
+    &:hover {
+        a {
+            color: #005cff;
         }
     }
 }
 
 .dribbb {
-    &:hover{
-        a{
-            color:#30bae7;
+    &:hover {
+        a {
+            color: #de4a84;
         }
     }
 }
 
 .github {
-    &:hover{
-        a{
-            color:#30bae7;
+    &:hover {
+        a {
+            color: black;
         }
     }
 }
 
 .otstup {
-    &:hover{
-        a{
-            color:#30bae7;
-        }
-    }
 }
